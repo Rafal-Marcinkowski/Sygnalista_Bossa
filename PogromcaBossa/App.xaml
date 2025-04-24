@@ -1,0 +1,59 @@
+﻿<unity:PrismApplication
+    x:Class="PogromcaBossa.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:PogromcaBossa"
+    xmlns:unity="clr-namespace:Prism.Unity;assembly=Prism.Unity.Wpf">
+
+    <Application.Resources>
+
+        <Style x:Key="startButtonStyle" TargetType="Button">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Background.BackgroundColor}" Value="0">
+                    <Setter Property="Background" Value="Green" />
+                    <Setter Property="IsEnabled" Value="True" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Background.BackgroundColor}" Value="0">
+                    <Setter Property="Background" Value="Gray" />
+                    <Setter Property="IsEnabled" Value="false" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Background.BackgroundColor}" Value="1">
+                    <Setter Property="Background" Value="Green" />
+                    <Setter Property="IsEnabled" Value="True" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="BackgroundStyle" TargetType="Grid">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Background.BackgroundColor}" Value="0">
+                    <Setter Property="Background" Value="White" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Background.BackgroundColor}" Value="1">
+                    <Setter Property="Background" Value="Gray" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Background.BackgroundColor}" Value="3">
+                    <Setter Property="Background" Value="blue" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Background.BackgroundColor}" Value="2">
+                    <Setter Property="Background" Value="Orange" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Background.BackgroundColor}" Value="4">
+                    <Setter Property="Background" Value="LightGreen" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="forceAutoScriptButtonStyle" TargetType="Button">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ForceButtonBackgroundColor}" Value="1">
+                    <Setter Property="Background" Value="White" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ForceButtonBackgroundColor}" Value="2">
+                    <Setter Property="Background" Value="Gray" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </Application.Resources>
+</unity:PrismApplication>
